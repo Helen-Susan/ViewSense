@@ -4,6 +4,23 @@ import yaml
 import os
 import glob
 
+def log_epoch_metrics(trainer):
+    epoch = trainer.epoch + 1
+    metrics = trainer.metrics
+
+    if metrics:
+        map50 = metrics.get('mAP50')
+        precision = metrics.get('precision')
+        recall = metrics.get('recall')
+        map50_95 = metrics.get('mAP50-95')
+
+        print(f"Epoch {epoch}: "
+              f"mAP50={map50 if map50 else 'N/A'}, "
+              f"Precision={precision if precision else 'N/A'}, "
+              f"Recall={recall if recall else 'N/A'}, "
+              f"mAP50-95={map50_95 if map50_95 else 'N/A'}")
+
+# Train the model with the callback to log metrics per epoch
 def main():
     print("--- Setting up YOLO26 Training ---")
     
@@ -12,11 +29,11 @@ def main():
     project = rf.workspace("anas-mohammed").project("detect-indian-currency-ldmie")
     version = project.version(1)
     print("Downloading dataset...")
-    dataset = version.download("yolo26") 
+    dataset = version.download("yolo26")  
     
     # 2. Analyze Dataset
     print("\n--- Dataset Analysis ---")
-    dataset_path = dataset.location
+    dataset_path = "Detect-Indian-Currency-1"
     yaml_path = os.path.join(dataset_path, "data.yaml")
     
     if os.path.exists(yaml_path):
@@ -38,8 +55,11 @@ def main():
 
     # 3. Train Model
     print("\n--- Starting YOLO26 Training on GPU ---")
-    model = YOLO("yolo26m.pt") 
-    
+    model = YOLO("yolo26n.pt") 
+
+
+    print("\n--- Starting YOLO26 Training on GPU ---")
+# ...existing code...
     results = model.train(
         data=yaml_path,
         epochs=100,
@@ -47,9 +67,11 @@ def main():
         device=0,      
         batch=16,      
         exist_ok=True, 
-        project="yolo26_currency_run" 
+        project="yolo26_currency_run" ,
+        #callbacks=[log_epoch_metrics]  # Add the callback here
     )
     print("Training Complete. Results saved to 'yolo26_currency_run'.")
 
 if __name__ == '__main__':
     main()
+

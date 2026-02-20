@@ -3,7 +3,7 @@ Detect-Indian-Currency-1/
 Detect-Indian-Currency-2/
 yolo26n.pt
 yolo26m.pt
-yolo26_currency_run/
+
 __pycache__/
 *.pt
 *.onnx

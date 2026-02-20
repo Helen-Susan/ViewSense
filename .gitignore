@@ -5,7 +5,7 @@ yolo26n.pt
 yolo26m.pt
 
 __pycache__/
-*.pt
+
 *.onnx
 *.zip
 Detect-Indian-Currency-*/

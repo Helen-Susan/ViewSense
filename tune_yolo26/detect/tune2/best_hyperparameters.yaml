@@ -1,0 +1,30 @@
+# 5/8 iterations complete ✅ (157382.92s)
+# Results saved to C:\Users\student\View\main-project-sw\runs\detect\tune2
+# Best fitness=0.34046 observed at iteration 5
+# Best fitness metrics are {'metrics/precision(B)': 0.48203, 'metrics/recall(B)': 0.55892, 'metrics/mAP50(B)': 0.47433, 'metrics/mAP50-95(B)': 0.34046, 'val/box_loss': 0.73413, 'val/cls_loss': 1.5321, 'val/dfl_loss': 0.01547, 'fitness': 0.34046}
+# Best fitness model is C:\Users\student\View\main-project-sw\runs\detect\train5
+lr0: 0.01
+lrf: 0.01303
+momentum: 0.94434
+weight_decay: 0.001
+warmup_epochs: 3.19989
+warmup_momentum: 0.95
+box: 6.22186
+cls: 0.68203
+dfl: 1.1111
+hsv_h: 0.02865
+hsv_s: 0.47952
+hsv_v: 0.39394
+degrees: 0.00155
+translate: 0.10293
+scale: 0.51575
+shear: 0.0
+perspective: 0.0
+flipud: 1.0e-05
+fliplr: 0.40516
+bgr: 0.00164
+mosaic: 1.0
+mixup: 0.00617
+cutmix: 0.0112
+copy_paste: 0.0
+close_mosaic: 10

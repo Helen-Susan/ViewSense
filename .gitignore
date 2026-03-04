@@ -3,7 +3,10 @@ Detect-Indian-Currency-1/
 Detect-Indian-Currency-2/
 yolo26n.pt
 yolo26m.pt
-
+.vscode
+dataset_1_temp
+dataset_2_temp
+merged_dataset_final
 __pycache__/
 
 *.onnx

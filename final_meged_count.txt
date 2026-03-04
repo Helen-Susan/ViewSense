@@ -1,0 +1,46 @@
+Step 1: Counting original datasets...
+
+--- Dataset 1 Counts ---
+10Rupee_coin: 754
+1Rupee_coin: 1817
+100Rupee_note: 732
+10Rupee_note: 403
+2Rupee_coin: 2435
+200Rupee_note: 426
+2000Rupee_note: 462
+20Rupee_note: 409
+5Rupee_coin: 971
+500Rupee_note: 454
+undefined: 49
+50Rupee_note: 466
+
+--- Dataset 2 Counts ---
+100: 2077
+20: 2110
+200: 2739
+500: 2346
+10: 2345
+50: 2625
+2000: 1871
+None: 2292
+5: 1054
+
+Step 2 & 3: Merging and Verifying...
+
+Unified Class List: ['100Rupee_note', '10Rupee_note', '20Rupee_note', '50Rupee_note', '200Rupee_note', '500Rupee_note', '2000Rupee_note', '1Rupee_coin', '2Rupee_coin', '5Rupee_coin', '10Rupee_coin', '5Rupee_note', 'None']     
+
+--- Final Verification (Merged Dataset) ---
+
+--- Merged Dataset Counts ---
+10Rupee_coin: 754
+1Rupee_coin: 1817
+100Rupee_note: 2809
+10Rupee_note: 2748
+2Rupee_coin: 2435
+200Rupee_note: 3165
+2000Rupee_note: 2333
+20Rupee_note: 2519
+5Rupee_coin: 971
+500Rupee_note: 2800
+None: 2341
+5Rupee_note: 1054

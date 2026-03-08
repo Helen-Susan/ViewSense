@@ -1,0 +1,52 @@
+# ViewSense: Unified Currency Merged Distribution (Projected)
+# Total Images Analyzed: ~75,000 across 6 Datasets
+
+============================================================
+1. INDIVIDUAL DATASET TOTALS (Image Counts)
+============================================================
+- ziptol-2 (Mixed): 22,742
+- 2023-madhujr-reupload-MC-9 (Mixed): 22,611
+- Currency detection.v1i.yolo26: 7,143
+- Currency-Detection-1: 3,442
+- Detect-Indian-Currency-1: 8,974
+- Indian-Currency-&-Coin-detection-1: 10,113
+
+TOTAL PROJECTED DATASET SIZE: 75,025 Images
+
+============================================================
+2. PROJECTED UNIFIED CLASS COUNTS (Harmonized)
+============================================================
+The following represents the SUM of all instances across all 6 datasets 
+mapped to our reference 13-class system.
+
+- 10Rupee_note:   22,143
+- 20Rupee_note:   21,833
+- 50Rupee_note:   23,474
+- 100Rupee_note:  22,921
+- 200Rupee_note:  19,652
+- 500Rupee_note:  21,725
+- 2000Rupee_note:  2,953
+- 5Rupee_note:     1,268
+- 1Rupee_coin:     2,891
+- 2Rupee_coin:     3,322
+- 5Rupee_coin:       975
+- 10Rupee_coin:      756
+- None/Undefined:     49
+
+============================================================
+3. TECHNICAL VERDICT & RECOMMENDATIONS
+============================================================
+- Note Density: The 10, 20, 50, 100, 200, and 500 denominations are 
+  EXCELLENTLY balanced (all between 19k and 23k instances). 
+  This will result in extreme model stability.
+
+- Coin Scarcity & Strategy: Coins (1, 2, 5, 10) are the minority here
+  (under 4k instances each). During training, we will use all of them 
+  to ensure the "Spectacles" can identify pocket change.
+
+- 2000 Note Status: While this note is becoming rare in circulation, 
+  having ~3,000 instances is perfect for 'legacy support' without 
+  biasing the model towards it.
+
+- Ready for Merging: The labeling noise (35+ names) is now solved with
+  this mapping. We can proceed with the 'ViewSense 75k Master Merge'.

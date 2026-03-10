@@ -1,5 +1,0 @@
-ultralytics
-roboflow
-pyyaml
-tqdm
-opencv-python-headless

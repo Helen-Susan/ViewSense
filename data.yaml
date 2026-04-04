@@ -1,0 +1,21 @@
+names:
+- '1'
+- '10'
+- '100'
+- '2'
+- '20'
+- '200'
+- '2000'
+- '5'
+- '50'
+- '500'
+nc: 10
+roboflow:
+  license: CC BY 4.0
+  project: indian-currency-coin-detection-97vpl
+  url: https://universe.roboflow.com/anazs-workspace/indian-currency-coin-detection-97vpl/dataset/1
+  version: 1
+  workspace: anazs-workspace
+test: ../test/images
+train: Indian-Currency-&-Coin-detection-1/train/images
+val: Indian-Currency-&-Coin-detection-1/valid/images
